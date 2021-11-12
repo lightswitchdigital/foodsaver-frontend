@@ -7,6 +7,7 @@ import store from './redux/store'
 import { MainInfo } from './components/MainInfo/MainInfo';
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
+import { WardsPage } from './components/Pages/WardsPage/WardsPage';
 
 class App extends Component {
   render() {
@@ -17,6 +18,9 @@ class App extends Component {
           <MainInfo/>
           <div className={'content'}>
             <Navbar/>
+            <div className={'page-wrapper'}>
+              <WardsPage/>
+            </div>
           </div>
         </div>
       </div>
