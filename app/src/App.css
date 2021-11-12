@@ -16,6 +16,10 @@
     font-size: 16px;
 }
 
+.green-text{
+    color: #4E9B33;
+}
+
 .btn{
     font-family: 'Avenirnextcyr';
     font-weight: 600;
@@ -52,6 +56,9 @@
 }
 .main-card .content{
     width: 290px;
+}
+.main-card .content-sm{
+    width: 260px;
 }
 .main-card .icons{
     padding-right: 51px;
@@ -98,4 +105,8 @@
 }
 .main-card:not(:last-child){
     margin-right: 20px;
+}
+.main-card .btn{
+    color: #264653;
+    margin-top: 12px;
 }
