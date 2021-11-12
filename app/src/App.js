@@ -4,12 +4,21 @@ import {Route, withRouter, Switch, BrowserRouter} from "react-router-dom";
 import { connect, Provider } from 'react-redux'
 import { compose } from 'redux'
 import store from './redux/store'
+import { MainInfo } from './components/MainInfo/MainInfo';
+import { Header } from './components/Header/Header';
+import { Navbar } from './components/Navbar/Navbar';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        
+      <div className={'container'}>
+        <Header/>
+        <div className={'grid-wrapper'}>
+          <MainInfo/>
+          <div className={'content'}>
+            <Navbar/>
+          </div>
+        </div>
       </div>
     );
   } 
