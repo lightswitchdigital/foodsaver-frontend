@@ -7,22 +7,22 @@ export const Navbar = () => {
         <div className={s.wrapper}>
            <ul>
                 <li>
-                    <NavLink to={'/'} className={s.active}>
+                    <NavLink to={'/wards'} className={s.link} activeClassName={s.active}>
                         Подопечные
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'} className={s.link}>
+                    <NavLink to={'/organizations'} className={s.link} activeClassName={s.active}>
                         Организации
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'} className={s.link}>
+                    <NavLink to={'/team'} className={s.link} activeClassName={s.active}>
                         Моя команда
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'} className={s.link}>
+                    <NavLink to={'/grath'} className={s.link} activeClassName={s.active}>
                         График
                     </NavLink>
                 </li>

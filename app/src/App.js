@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
-import {Route, withRouter, Switch, BrowserRouter} from "react-router-dom";
+import {Route, withRouter, Switch, Redirect, BrowserRouter} from "react-router-dom";
 import { connect, Provider } from 'react-redux'
 import { compose } from 'redux'
 import store from './redux/store'
@@ -23,6 +23,7 @@ class App extends Component {
               <Switch>
                 <Route path={'/wards'} component={() => <WardsPage/>}/>
                 <Route path={'/organizations'} component={() => <OrganizationsPage/>}/>
+                <Route path="*"><Redirect to="/wards" /></Route>
               </Switch>
             </div>
           </div>
