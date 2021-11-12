@@ -4,7 +4,7 @@ RUN npm install
 
 WORKDIR /var/www/frontend
 RUN chmod -R 755 /var/www/frontend
-COPY ./build /var/www/frontend
+COPY . /var/www/frontend
 
 RUN npm i -g serve
 
