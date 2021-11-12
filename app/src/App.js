@@ -8,6 +8,7 @@ import { MainInfo } from './components/MainInfo/MainInfo';
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
 import { WardsPage } from './components/Pages/WardsPage/WardsPage';
+import { OrganizationsPage } from './components/Pages/OrganizotionsPage/OrganizationsPage';
 
 class App extends Component {
   render() {
@@ -19,7 +20,10 @@ class App extends Component {
           <div className={'content'}>
             <Navbar/>
             <div className={'page-wrapper'}>
-              <WardsPage/>
+              <Switch>
+                <Route path={'/wards'} component={() => <WardsPage/>}/>
+                <Route path={'/organizations'} component={() => <OrganizationsPage/>}/>
+              </Switch>
             </div>
           </div>
         </div>

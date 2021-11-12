@@ -57,11 +57,27 @@
 .main-card .content{
     width: 290px;
 }
-.main-card .content-sm{
+.main-card.high{
+    position: relative;
+}
+.main-card.high::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100%;
+    background: #f04617;
+    border-radius: 0px 15px 15px 0px;
+}
+.main-card .content-md{
     width: 260px;
 }
+.main-card .content-sm{
+    width: 176px;
+}
 .main-card .icons{
-    padding-right: 51px;
+    padding-right: 28px;
     padding-left: 20px;
 }
 .main-card .line{
@@ -80,7 +96,9 @@
     align-items: center;
     border: 1px solid #ECEDED;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 5px;  
+}
+.main-card .icons a:not(:last-child){
     margin-bottom: 16px;
 }
 .main-card .icons a img{
