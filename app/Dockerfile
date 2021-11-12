@@ -1,12 +1,10 @@
 FROM node:10-alpine as builder
 
-RUN npm install
-
 WORKDIR /frontend
-COPY build build
-COPY node_modules node_modules
+COPY . .
 
-RUN chmod -R 755 /frontend
+RUN npm install
+RUN npm run build
 
 RUN npm i -g serve
 
