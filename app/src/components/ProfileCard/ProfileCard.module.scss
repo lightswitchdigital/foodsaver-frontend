@@ -3,10 +3,22 @@
     border-radius: 15px;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
     width: fit-content;
+
+    .stats {
+        border-left: 2px solid #35B2E8;
+        border-radius: 2px;
+        padding: 0 15px;
+
+        ul {
+
+        }
+    }
+
     .info {
         display: flex;
         align-items: center;
-        .img{
+
+        .img {
             margin-right: 20px;
             position: relative;
             overflow: hidden;
