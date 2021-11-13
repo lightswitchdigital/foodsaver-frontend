@@ -50,16 +50,28 @@
                 font-size: 20px;
                 font-weight: 450;
                 transition: all 0.3;
+                align-items: center;
                 &:hover{
                     opacity: 1;
                 }
                 img{
                     margin-right: 8px;
                     width: 20px;
+                    transition: all 0.5;
                 }
             }
             &:last-child{
                 margin-top: 20px;
+                button{
+                    opacity: 1;
+                    color: #F04618;
+                    cursor: pointer;
+                    &:hover{
+                        img{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
             }
         }
     }

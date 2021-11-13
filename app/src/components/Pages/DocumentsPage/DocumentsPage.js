@@ -9,8 +9,8 @@ import 'react-dropdown/style.css';
 import {useDropzone} from 'react-dropzone'
 
 const Documents = (props) => {
-    // const { register, handleSubmit } = useForm();
     const [fileArr, setFileArr] = useState([])
+    const [flag, setFlag] = useState(false)
 
     const onSubmit = data => {
         function test(input){
@@ -29,7 +29,6 @@ const Documents = (props) => {
                         })
 					})
 				})
-            
 		}
         test(data)
     }
@@ -37,8 +36,26 @@ const Documents = (props) => {
     const onDrop = useCallback(acceptedFiles => {
         onSubmit(acceptedFiles)
       }, [])
+
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
+    const fintElem = (text, num = 0) => {
+        fileArr.filter(function(val) {return val.indexOf(text)})
+        fileArr.filter(val => {return fileArr[val.indexOf(text) + num]})
+    }
+
+    const createObj = () => {
+        let obj = {}
+        if(fileArr.filter(function(val) {return val.indexOf('Акт приема-передачи продовольственных товаров') !== -1})){
+            obj = {
+                'type': 'ward',
+                'receiver': fileArr[fintElem('в дальнейшем «Жертвователь»') - 3],
+                'sennder': fileArr[fintElem('в дальнейшем «Одаряемый»') - 3]
+            }
+        }
+        console.log(obj);
+        setFlag(true)
+    }
 
     return (
         <div>
@@ -46,8 +63,8 @@ const Documents = (props) => {
             <div {...getRootProps()} className={s.dropzone}>
                 <input {...getInputProps()} />
                 <img src="./icons/add-circle.svg"/>
+                {(fileArr.length > 0 && !flag)&&  createObj()}
             </div>
-            <p>{fileArr.filter(val => {return fileArr[val.indexOf("Акт приема-передачи")]})}</p>
         </div>
     )
 }
