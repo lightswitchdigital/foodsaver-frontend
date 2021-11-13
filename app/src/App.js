@@ -18,6 +18,9 @@ import DocumentsPage from './components/Pages/DocumentsPage/DocumentsPage';
 import { UserPage } from './components/Pages/UserPage/UserPage';
 
 import Cropper from 'react-perspective-cropper'
+import { TeamLeadPage } from './components/Pages/TeamLeadPage/TeamPage';
+import { ReportsPage } from './components/Pages/ReportsPage/ReportsPage';
+import { OrganizationsLeadPage } from './components/Pages/OrganizationsLeadPage/OrganizationsPage';
 
 class App extends Component {
     componentDidMount() {
@@ -53,18 +56,18 @@ class App extends Component {
                   switch(this.props.userType) {
                     case "teamlead": 
                       return <Switch>
-                      <Route path={'/organizations'} component={() => <OrganizationsPage/>}/>
+                      <Route path={'/organizations'} component={() => <OrganizationsLeadPage/>}/>
                       <Route path={'/team'} component={() => <TeamPage/>}/>
-                      <Route path={'/grath'} component={() => <GrathLeadPage/>}/>
                       <Route path={'/documents'} component={() => <DocumentsPage/>}/>
                       <Route path={'/user'} component={() => <UserPage/>}/>
-                      <Route path="*"><Redirect to="/grath" /></Route>
+                      <Route path={'/reports'} component={() => <ReportsPage/>}/>
+                      <Route path="*"><Redirect to="/team" /></Route>
                     </Switch>
                     case "user": 
                       return <Switch>
                       <Route path={'/wards'} component={() => <WardsPage/>}/>
                       <Route path={'/organizations'} component={() => <OrganizationsPage/>}/>
-                      <Route path={'/team'} component={() => <TeamPage/>}/>
+                      <Route path={'/team'} component={() => <TeamLeadPage/>}/>
                       <Route path={'/grath'} component={() => <GrathPage/>}/>
                       <Route path={'/documents'} component={() => <DocumentsPage/>}/>
                       <Route path="*"><Redirect to="/wards" /></Route>

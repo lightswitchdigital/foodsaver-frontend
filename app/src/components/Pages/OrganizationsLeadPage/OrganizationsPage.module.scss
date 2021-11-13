@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    strong{
+        color: #264653;
+        font-size: 16px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+.newrow{
+    margin-top: 20px;
+}
+.card{
+    max-width: 264px;
+    display: flex;
+    flex-wrap: wrap;
+    .Dropdown-control{
+        border: 1px solid #ECEDED;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+}

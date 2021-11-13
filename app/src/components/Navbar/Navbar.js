@@ -8,11 +8,6 @@ export const Navbar = ({type = ''}) => {
             {type != 'user' ? 
             <ul>
                 <li>
-                    <NavLink to={'/grath'} className={s.link} activeClassName={s.active}>
-                        График
-                    </NavLink>
-                </li>
-                <li>
                     <NavLink to={'/organizations'} className={s.link} activeClassName={s.active}>
                         Организации
                     </NavLink>
@@ -20,6 +15,11 @@ export const Navbar = ({type = ''}) => {
                 <li>
                     <NavLink to={'/team'} className={s.link} activeClassName={s.active}>
                         Команда
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/reports'} className={s.link} activeClassName={s.active}>
+                        Отчеты
                     </NavLink>
                 </li>
             </ul> :

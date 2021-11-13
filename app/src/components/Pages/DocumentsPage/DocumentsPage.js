@@ -5,11 +5,48 @@ import { connect } from 'react-redux';
 import { docx4js } from 'docx4js';
 import 'react-dropdown/style.css';
 import {useDropzone} from 'react-dropzone'
+import Modal from 'react-modal';
+
+let flag = false
+
+const customStyles = {
+    content: {
+      top: 70,
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      padding: 0,
+      width: 650,
+      color: '#4E9B33',
+      transform: 'translate(-50%, -50%)',
+      border: 'none',
+      boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+      borderRadius: 12,
+      textAlign: 'center'
+    },
+  };
+
+//   Modal.setAppElement('#yourAppElement');
 
 const Documents = (props) => {
+    const [modalIsOpen, setIsOpen] = React.useState(false);
     const fileArr = []
     const [info, setInfo] = useState(false)
 
+    function openModal() {
+        setIsOpen(true);
+        flag = false
+    }
+
+    function afterOpenModal() {
+        flag = false
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+    
     const onDrop = useCallback(acceptedFiles => {
         function test(input){
             const file= input[0]
@@ -25,6 +62,7 @@ const Documents = (props) => {
                         })
                     })
                     createObj()
+                    flag = true
             })
         }
         test(acceptedFiles)
@@ -32,12 +70,6 @@ const Documents = (props) => {
       }, [])
 
     const {getRootProps, getInputProps} = useDropzone({onDrop})
-
-    
-
-    const findElem = (text) => {
-        fileArr.filter(val => {return val.indexOf(text)})
-    }
     
     const createObj = () => {
         let obj = {}
@@ -54,14 +86,23 @@ const Documents = (props) => {
 
     return (
         <div className={s.flex}>
+            <Modal
+                isOpen={modalIsOpen}
+                onAfterOpen={afterOpenModal}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+            >
+                <h1>Данные отправлены</h1>
+            </Modal>
             <div>
             <div {...getRootProps()} className={s.dropzone}>
                 <input {...getInputProps()} />
                 <img src="./icons/add-circle.svg"/>
             </div>
-            {info.length ? <button className={s.btn}>Отправить</button> : null}
+            {flag ? <button className={s.btn} onClick={openModal}>Отправить</button> : null}
             </div>
-            {info.length ?
+            {flag ?
              <div className={s.info}>
                 <p>Тип акта: магазин-волнтер</p>
                 <h3>Получатель</h3>

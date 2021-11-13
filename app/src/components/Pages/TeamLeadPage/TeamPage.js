@@ -4,7 +4,7 @@ import { Achievement } from '../../Achievement/Achievement'
 import { Card } from '../../ui/Card'
 import s from './TeamPage.module.css'
 
-export const TeamPage = () => {
+export const TeamLeadPage = () => {
     return (
         <div>
             <div className={s.wrapper}>

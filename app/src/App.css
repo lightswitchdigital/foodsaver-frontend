@@ -53,6 +53,7 @@
     width: fit-content;
     height: fit-content;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 .main-card .content{
     width: 290px;
@@ -217,3 +218,8 @@
     color: #fff;
 }
 .flex{display:flex}
+
+.w100{
+    width: fit-content;
+    float: right;
+}
