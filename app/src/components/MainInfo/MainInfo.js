@@ -7,8 +7,7 @@ export const MainInfo = () => {
     return (
         <div className={s.wrapper}>
             <ProfileCard/>
-            <NavLink to={'/'} className={s.btnActGreen}>Загрузить акт</NavLink>
-            <NavLink to={'/'} className={s.btnAct}>Акты</NavLink>
+            <NavLink to={'/documents'} className={s.btnActGreen}>Загрузить акт</NavLink>
         </div>
     )
 }

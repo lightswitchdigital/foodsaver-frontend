@@ -70,7 +70,6 @@ export const logOut = () => (dispatch) => {
     dispatch(setInitial(false))
     localStorage.removeItem('login');
     localStorage.removeItem('password');
-    window.location.reload()
 }
 
 export const requestWards = () => {

@@ -1,0 +1,59 @@
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+}
+.dropzone{
+    width: 205px;
+    height: 140px;
+    border-radius: 15px;
+    border: 2px solid #AFAFAF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2;
+    img{
+        transition: all 0.2;
+        opacity: 0.5;
+    }
+    &:hover{
+        border-color: #606060;
+        img{
+            opacity: .9;
+        }
+    }
+}
+
+.docblock{
+    width: 205px;
+    height: 140px;
+    border-radius: 15px;
+    border: 1px solid #ECEDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2;
+    margin-bottom: 8px;
+    &:hover{
+        border-color: #606060;
+        img{
+            opacity: .9;
+        }
+    }
+}
+.docWrapper{
+    margin-right: -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.docCard{
+    margin-right: 20px;
+    p{
+        margin-top: 4px;
+    }
+    .mute{
+        color: #606060;
+    }
+}
