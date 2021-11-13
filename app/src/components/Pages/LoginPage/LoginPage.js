@@ -22,8 +22,8 @@ const LoginAPIPage = (props) => {
                     <p className={s.subtitle}>Войдите в аккаунт, чтобы стать <br/> частью большого дела</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         {props.errorMessage && <p className={s.error}>{props.errorMessage}</p>}
-                        <input type="name" value="user" placeholder="Номер телефона/Email" {...register("login")}/>
-                        <input type="password" value="1111" placeholder="Пароль" {...register("password")}/>
+                        <input type="name" placeholder="Номер телефона/Email" {...register("login")}/>
+                        <input type="password" placeholder="Пароль" {...register("password")}/>
                         <button type="submit" className={s.btn}>Войти</button>
                     </form>
                 </div>

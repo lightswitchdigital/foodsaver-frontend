@@ -15,6 +15,7 @@
     "react-dropdown": "^1.9.2",
     "react-dropzone": "^11.4.2",
     "react-hook-form": "^7.7.1",
+    "react-perspective-cropper": "^0.2.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^4.0.3",

@@ -3469,6 +3469,11 @@
     "strip-ansi" "^6.0.0"
     "wrap-ansi" "^6.2.0"
 
+"clsx@^1.1.1":
+  "integrity" "sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA=="
+  "resolved" "https://registry.npmjs.org/clsx/-/clsx-1.1.1.tgz"
+  "version" "1.1.1"
+
 "co@^4.6.0":
   "integrity" "sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ="
   "resolved" "https://registry.npmjs.org/co/-/co-4.6.0.tgz"
@@ -8249,6 +8254,11 @@
     "is-docker" "^2.0.0"
     "is-wsl" "^2.1.1"
 
+"opencv-react@0.0.4":
+  "integrity" "sha512-3fbfYIlSWzu9lfhMMq5WKhZtuNiBhzt/+VqUHmQOSyk2/wIK5a3R4KMnqJZMIHvYlyvoUJml79p0rC8sSg3cfQ=="
+  "resolved" "https://registry.npmjs.org/opencv-react/-/opencv-react-0.0.4.tgz"
+  "version" "0.0.4"
+
 "opn@^5.5.0":
   "integrity" "sha512-PqHpggC9bLV0VeWcdKhkpxY+3JTzetLSqTCWL/z/tFIbI6G8JCjondXklT1JinczLz2Xib62sSp0T/gKT4KksA=="
   "resolved" "https://registry.npmjs.org/opn/-/opn-5.5.0.tgz"
@@ -9413,7 +9423,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.0.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.0.0", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -9614,7 +9624,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^0.14.7 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react-dom@^17.0.2":
+"react-dom@*", "react-dom@^0.14.7 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react-dom@^17.0.2", "react-dom@>= 16.3.0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -9622,6 +9632,14 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
     "scheduler" "^0.20.2"
+
+"react-draggable@^4.4.3":
+  "integrity" "sha512-6e0WdcNLwpBx/YIDpoyd2Xb04PB0elrDrulKUgdrIlwuYvxh5Ok9M+F8cljm8kPXXs43PmMzek9RrB1b7mLMqA=="
+  "resolved" "https://registry.npmjs.org/react-draggable/-/react-draggable-4.4.4.tgz"
+  "version" "4.4.4"
+  dependencies:
+    "clsx" "^1.1.1"
+    "prop-types" "^15.6.0"
 
 "react-dropdown@^1.9.2":
   "integrity" "sha512-g4eufErTi5P5T5bGK+VmLl//qvAHy79jm6KKx8G2Tl3mG90bpigb+Aw85P+C2JUdAnIIQdv8kP/oHN314GvAfw=="
@@ -9673,6 +9691,15 @@
   "integrity" "sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
+
+"react-perspective-cropper@^0.2.1":
+  "integrity" "sha512-+mb/4Z8Bj+35LuiG8PjHD+ADIXaJ4M21WSJLlAZ8s67RMVkw7Yyel+wuvY/x4/XO6nd93OFy2AjLlAOLsdsBBg=="
+  "resolved" "https://registry.npmjs.org/react-perspective-cropper/-/react-perspective-cropper-0.2.1.tgz"
+  "version" "0.2.1"
+  dependencies:
+    "opencv-react" "0.0.4"
+    "prop-types" "^15.7.2"
+    "react-draggable" "^4.4.3"
 
 "react-redux@^6.0.1 || ^7.0.0", "react-redux@^7.2.0":
   "integrity" "sha512-10RPdsz0UUrRL1NZE0ejTkucnclYSgXp5q+tB5SWx2qeG2ZJQJyymgAhwKy73yiL/13btfB6fPr+rgbMAaZIAQ=="
@@ -9786,7 +9813,7 @@
   optionalDependencies:
     "fsevents" "^2.1.3"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.7 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react@^16.4.2", "react@^16.8.0 || ^17", "react@^16.8.3 || ^17", "react@^17.0.2", "react@>= 16", "react@>= 16.8", "react@>=15", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.7 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react@^16.0.0", "react@^16.4.2", "react@^16.8.0 || ^17", "react@^16.8.3 || ^17", "react@^17.0.2", "react@>= 16", "react@>= 16.3.0", "react@>= 16.8", "react@>=15", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
