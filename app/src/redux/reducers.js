@@ -3,6 +3,7 @@ import { API } from "../api/api"
 const SET_USER = 'SET_USER'
 const SET_MESSAGE = 'SET_MESSAGE'
 const SET_INITIAL = 'SET_INITIAL'
+const SET_WARDS = 'SET_WARDS'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 
 let initialState = {
@@ -14,7 +15,8 @@ let initialState = {
         {login: 'admin', password: '1111', type: 'admin'}
     ],
     isFetching: false,
-    errorMessage: ''
+    errorMessage: '',
+    wards: []
 }
 
 const appReducer = (state = initialState, action) => {
@@ -25,6 +27,8 @@ const appReducer = (state = initialState, action) => {
             return { ...state, initialized: action.initialized}
         case SET_MESSAGE:
             return { ...state, errorMessage: action.errorMessage}
+        case SET_WARDS:
+            return { ...state, wards: action.wards}
         default:
             return state
     }
@@ -33,6 +37,7 @@ const appReducer = (state = initialState, action) => {
 // ACTION CREATOR
 
 export const setUser = (userType) => ({ type: SET_USER, userType})
+export const setWards = (wards) => ({ type: SET_WARDS, wards})
 export const setInitial = (initialized) => ({ type: SET_INITIAL, initialized})
 export const setMessage = (errorMessage) => ({ type: SET_MESSAGE, errorMessage})
 export const toggleIsFetching = (isFetching) => ({ type: TOGGLE_IS_FETCHING, isFetching })
@@ -45,7 +50,8 @@ export const loginUser = (login, password) => (dispatch) => {
         if(user.password === password){
             dispatch(setUser(user.type))   
             dispatch(setInitial(true))
-            document.cookie = `login=${user.login}; password=${user.password};`
+            localStorage.setItem('login', user.login);
+            localStorage.setItem('password', user.password);
         }else{
             dispatch(setMessage('Пароль неверен'))
         }
@@ -57,7 +63,20 @@ export const loginUser = (login, password) => (dispatch) => {
 export const logOut = () => (dispatch) => {
     dispatch(setUser(''))   
     dispatch(setInitial(false))
-    document.cookie = ""
+    localStorage.removeItem('login');
+    localStorage.removeItem('password');
+    window.location.reload()
+}
+
+export const requestWards = () => {
+    return async (dispatch) => {
+        dispatch(toggleIsFetching(true))
+        let data = await API.getWards()
+        
+        dispatch(setWards(data.data))
+        dispatch(toggleIsFetching(false))
+    }
+    
 }
 
 

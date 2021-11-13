@@ -1,11 +1,11 @@
 import * as axios from 'axios'
 
 const instance = axios.create({
-    baseURL : 'https://foodsaver-api.lightswitch.digital' 
+    baseURL : 'https://foodsaver-api.lightswitch.digital/index.php/api' 
 })
 
 export const API = {
-    getAll(){
-        return instance.get(``)
+    getWards(){
+        return instance.get(`/wards/get`)
     }
 }

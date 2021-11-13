@@ -1,3 +1,3 @@
-// export const getResult = (state) => {
-//     return state.songsPage.searchResults
-// }
+export const getWards = (state) => {
+    return state.app.wards
+}

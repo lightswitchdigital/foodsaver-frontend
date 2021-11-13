@@ -13,8 +13,14 @@ import { OrganizationsPage } from './components/Pages/OrganizationsPage/Organiza
 import { GrathPage } from './components/Pages/GrathPage/GrathPage';
 import { GrathLeadPage } from './components/Pages/GrathLeadPage/GrathLeadPage';
 import { LoginPage } from './components/Pages/LoginPage/LoginPage';
+import { loginUser } from './redux/reducers'
 
 class App extends Component {
+  componentDidMount() {
+    const login = localStorage.getItem('login')
+    const password = localStorage.getItem('password')
+    this.props.loginUser(login, password)
+  }
 
   render() {
     if(!this.props.initialized){
@@ -76,7 +82,7 @@ const mapStateToProps = (state) => ({
   initialized: state.app.initialized
 })
 
-const AppContainer = compose(withRouter , connect(mapStateToProps, null))(App)
+const AppContainer = compose(withRouter , connect(mapStateToProps, { loginUser }))(App)
 
 const MainApp = props => {
   return <BrowserRouter>

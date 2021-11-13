@@ -39,8 +39,11 @@
             margin: 0;
             padding: 0;
             margin-top: 12px;
-            a{
+            a, button{
                 display: flex;
+                background: none;
+                border: none;
+                padding: 0;
                 color: #000000;
                 opacity: .6;
                 text-decoration: none;

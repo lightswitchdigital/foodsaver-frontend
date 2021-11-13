@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './ProfileCard.module.css'
 import { connect } from 'react-redux';
+import { logOut } from '../../redux/reducers';
 
 export const ProfileCardAPI = (props) => {
     return (
@@ -39,4 +40,4 @@ export const ProfileCardAPI = (props) => {
     )
 }
 
-export const ProfileCard = connect(null, null)(ProfileCardAPI)
+export const ProfileCard = connect(null, {logOut})(ProfileCardAPI)
