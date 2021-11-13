@@ -80,6 +80,16 @@
     padding-right: 28px;
     padding-left: 20px;
 }
+.main-card .icons-sm{
+    padding-right: 0;
+    padding-left: 20px;
+}
+.main-card *{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+}
 .main-card .line{
     margin-bottom: 8px;
     display: block;

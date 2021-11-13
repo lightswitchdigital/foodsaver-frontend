@@ -8,7 +8,8 @@ import { MainInfo } from './components/MainInfo/MainInfo';
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
 import { WardsPage } from './components/Pages/WardsPage/WardsPage';
-import { OrganizationsPage } from './components/Pages/OrganizotionsPage/OrganizationsPage';
+import { TeamPage } from './components/Pages/TeamPage/TeamPage';
+import { OrganizationsPage } from './components/Pages/OrganizationsPage/OrganizationsPage';
 
 class App extends Component {
   render() {
@@ -23,6 +24,8 @@ class App extends Component {
               <Switch>
                 <Route path={'/wards'} component={() => <WardsPage/>}/>
                 <Route path={'/organizations'} component={() => <OrganizationsPage/>}/>
+                <Route path={'/team'} component={() => <TeamPage/>}/>
+                <Route path={'/grath'} component={() => <>grath</>}/>
                 <Route path="*"><Redirect to="/wards" /></Route>
               </Switch>
             </div>
