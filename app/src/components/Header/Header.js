@@ -8,7 +8,7 @@ export const Header = () => {
             <img src={'./logo-horizontal.svg'} className={s.logo}/>
             <ul>
                 <li>
-                    <NavLink to={'/'} className={s.link}>Наши правила</NavLink>
+                    <a href={'https://foodsharing.ru/rules/'} className={s.link}>Наши правила</a>
                 </li>
                 <li>
                     <NavLink to={'/'} className={s.link}>Вопрос/Ответ</NavLink>

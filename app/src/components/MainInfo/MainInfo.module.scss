@@ -14,6 +14,11 @@
     text-decoration: none;
     width: 276px;
     text-align: center;
+    transition: 0.2s;
+    &:hover{
+        background: #606060;
+        color: #fff;
+    }
 }
 .btnActGreen{
     display: block;
@@ -28,4 +33,9 @@
     text-decoration: none;
     width: 276px;
     text-align: center;
+    transition: 0.2s;
+    &:hover{
+        background: #4E9B33;
+        color: #fff;
+    }
 }

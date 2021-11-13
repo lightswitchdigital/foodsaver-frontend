@@ -4,6 +4,7 @@ const SET_USER = 'SET_USER'
 const SET_MESSAGE = 'SET_MESSAGE'
 const SET_INITIAL = 'SET_INITIAL'
 const SET_WARDS = 'SET_WARDS'
+const SET_ORGANIZATIONS = 'SET_ORGANIZATIONS'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 
 let initialState = {
@@ -16,7 +17,8 @@ let initialState = {
     ],
     isFetching: false,
     errorMessage: '',
-    wards: []
+    wards: [],
+    organizations: []
 }
 
 const appReducer = (state = initialState, action) => {
@@ -29,6 +31,8 @@ const appReducer = (state = initialState, action) => {
             return { ...state, errorMessage: action.errorMessage}
         case SET_WARDS:
             return { ...state, wards: action.wards}
+        case SET_ORGANIZATIONS:
+            return { ...state, organizations: action.organizations}
         default:
             return state
     }
@@ -38,6 +42,7 @@ const appReducer = (state = initialState, action) => {
 
 export const setUser = (userType) => ({ type: SET_USER, userType})
 export const setWards = (wards) => ({ type: SET_WARDS, wards})
+export const setOrganizations = (organizations) => ({ type: SET_ORGANIZATIONS, organizations})
 export const setInitial = (initialized) => ({ type: SET_INITIAL, initialized})
 export const setMessage = (errorMessage) => ({ type: SET_MESSAGE, errorMessage})
 export const toggleIsFetching = (isFetching) => ({ type: TOGGLE_IS_FETCHING, isFetching })
@@ -76,7 +81,15 @@ export const requestWards = () => {
         dispatch(setWards(data.data))
         dispatch(toggleIsFetching(false))
     }
-    
+}
+
+export const requestOrganizations = () => {
+    return async (dispatch) => {
+        dispatch(toggleIsFetching(true))
+        let data = await API.getOrganizations()
+        dispatch(setOrganizations(data.data))
+        dispatch(toggleIsFetching(false))
+    }
 }
 
 
