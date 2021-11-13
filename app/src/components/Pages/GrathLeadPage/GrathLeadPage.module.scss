@@ -1,0 +1,47 @@
+.table{
+    th{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    thead{
+        th{
+            border-bottom: 1px solid #ECEDED;
+            padding: 12px 0;
+            font-size: 16px;
+        }
+    }
+    tbody{
+        th:first-child{
+            padding-right: 16px;
+        }
+    }
+    .btnCalender{
+        margin: 8px 2px;
+        width: 50px;
+        height: 25px;
+        border-radius: 4px;
+        background: #ECEDED;
+        display: block;
+        &.active{
+            background: #35B2E8;
+        }
+    }
+}
+.week{
+    color: #606060;
+    margin-bottom: 20px;
+}
+.btn{
+    padding: 12px 54px;
+    background: none;
+    border: none;
+    display: block;
+    border: 2px solid #4E9B33;
+    border-radius: 8px;
+    color: #4E9B33;
+    font-weight: 600;
+    font-size: 18px;
+    width: fit-content;
+    margin-top: 24px;
+    text-decoration: none;
+}

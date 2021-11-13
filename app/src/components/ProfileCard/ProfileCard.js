@@ -1,8 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './ProfileCard.module.css'
+import { connect } from 'react-redux';
 
-export const ProfileCard = () => {
+export const ProfileCardAPI = (props) => {
     return (
         <div className={s.wrapper}>
             <div className={s.info}>
@@ -28,12 +29,14 @@ export const ProfileCard = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'} className={s.link}>
+                    <button className={s.link} onClick={() => props.logOut()}>
                         <img src={"./icons/logout.svg"}/>
                         Выйти
-                    </NavLink>
+                    </button>
                 </li>
             </ul>
         </div>
     )
 }
+
+export const ProfileCard = connect(null, null)(ProfileCardAPI)

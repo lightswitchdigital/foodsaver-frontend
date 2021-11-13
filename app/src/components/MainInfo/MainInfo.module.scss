@@ -3,7 +3,21 @@
 }
 .btnAct{
     display: block;
-    padding: 12px 79px;
+    padding: 12px 0;
+    border: 2px solid #606060;
+    border-radius: 8px;
+    color: #606060;
+    font-weight: 600;
+    font-size: 18px;
+    width: fit-content;
+    margin-top: 16px;
+    text-decoration: none;
+    width: 276px;
+    text-align: center;
+}
+.btnActGreen{
+    display: block;
+    padding: 12px 0;
     border: 2px solid #4E9B33;
     border-radius: 8px;
     color: #4E9B33;
@@ -12,4 +26,6 @@
     width: fit-content;
     margin-top: 24px;
     text-decoration: none;
+    width: 276px;
+    text-align: center;
 }

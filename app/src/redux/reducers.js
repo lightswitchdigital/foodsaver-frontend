@@ -1,17 +1,30 @@
 import { API } from "../api/api"
 
-const SET_SONG = 'SET_SONG'
+const SET_USER = 'SET_USER'
+const SET_MESSAGE = 'SET_MESSAGE'
+const SET_INITIAL = 'SET_INITIAL'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 
 let initialState = {
-    song: {},
-    isFetching: false
+    initialized: false,
+    userType: '',
+    users: [
+        {login: 'user', password: '1111', type: 'user'},
+        {login: 'teamlead', password: '1111', type: 'teamlead'},
+        {login: 'admin', password: '1111', type: 'admin'}
+    ],
+    isFetching: false,
+    errorMessage: ''
 }
 
-const songsReducer = (state = initialState, action) => {
+const appReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_SONG:
-            return { ...state, song: action.song}
+        case SET_USER:
+            return { ...state, userType: action.userType}
+        case SET_INITIAL:
+            return { ...state, initialized: action.initialized}
+        case SET_MESSAGE:
+            return { ...state, errorMessage: action.errorMessage}
         default:
             return state
     }
@@ -19,16 +32,33 @@ const songsReducer = (state = initialState, action) => {
 
 // ACTION CREATOR
 
-export const setSong = (song) => ({ type: SET_SONG, song})
+export const setUser = (userType) => ({ type: SET_USER, userType})
+export const setInitial = (initialized) => ({ type: SET_INITIAL, initialized})
+export const setMessage = (errorMessage) => ({ type: SET_MESSAGE, errorMessage})
 export const toggleIsFetching = (isFetching) => ({ type: TOGGLE_IS_FETCHING, isFetching })
 
 // THUNK
 
-export const requestSong = (songId) => async (dispatch) => {
-    dispatch(toggleIsFetching(true))
-    let response = await API.getSong(songId)
-    dispatch(setSong(response.data))   
-    dispatch(toggleIsFetching(false)) 
+export const loginUser = (login, password) => (dispatch) => {
+    const user = initialState.users.find(user => user.login === login)
+    if(user){
+        if(user.password === password){
+            dispatch(setUser(user.type))   
+            dispatch(setInitial(true))
+            document.cookie = `login=${user.login}; password=${user.password};`
+        }else{
+            dispatch(setMessage('Пароль неверен'))
+        }
+    }else{
+        dispatch(setMessage('Логин неверен'))
+    }
 }
 
-export default songsReducer
+export const logOut = () => (dispatch) => {
+    dispatch(setUser(''))   
+    dispatch(setInitial(false))
+    document.cookie = ""
+}
+
+
+export default appReducer
