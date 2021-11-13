@@ -10,6 +10,13 @@
     thead{
         th{
             border-bottom: 1px solid #ECEDED;
+
+            small {
+                font-size: 12px;
+                opacity: .6;
+                color: black;
+                display: block;
+            }
         }
     }
 }

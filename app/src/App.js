@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component, useRef} from 'react'
 import './App.css';
 import {Route, withRouter, Switch, Redirect, BrowserRouter} from "react-router-dom";
 import { connect, Provider } from 'react-redux'
@@ -6,26 +6,28 @@ import { compose } from 'redux'
 import store from './redux/store'
 import { MainInfo } from './components/MainInfo/MainInfo';
 import { Header } from './components/Header/Header';
-import { Navbar } from './components/Navbar/Navbar';
-import { WardsPage } from './components/Pages/WardsPage/WardsPage';
-import { TeamPage } from './components/Pages/TeamPage/TeamPage';
-import { OrganizationsPage } from './components/Pages/OrganizationsPage/OrganizationsPage';
-import { GrathPage } from './components/Pages/GrathPage/GrathPage';
-import { GrathLeadPage } from './components/Pages/GrathLeadPage/GrathLeadPage';
-import { LoginPage } from './components/Pages/LoginPage/LoginPage';
-import { loginUser } from './redux/reducers'
+import {Navbar} from './components/Navbar/Navbar';
+import {WardsPage} from './components/Pages/WardsPage/WardsPage';
+import {TeamPage} from './components/Pages/TeamPage/TeamPage';
+import {OrganizationsPage} from './components/Pages/OrganizationsPage/OrganizationsPage';
+import {GrathPage} from './components/Pages/GrathPage/GrathPage';
+import {GrathLeadPage} from './components/Pages/GrathLeadPage/GrathLeadPage';
+import {LoginPage} from './components/Pages/LoginPage/LoginPage';
+import {loginUser} from './redux/reducers'
 import DocumentsPage from './components/Pages/DocumentsPage/DocumentsPage';
 import { UserPage } from './components/Pages/UserPage/UserPage';
 
-class App extends Component {
-  componentDidMount() {
-    const login = localStorage.getItem('login')
-    const password = localStorage.getItem('password')
-    this.props.loginUser(login, password)
-  }
+import Cropper from 'react-perspective-cropper'
 
-  render() {
-    if(!this.props.initialized){
+class App extends Component {
+    componentDidMount() {
+        const login = localStorage.getItem('login')
+        const password = localStorage.getItem('password')
+        this.props.loginUser(login, password)
+    }
+
+    render() {
+        if (!this.props.initialized) {
       return (
         <LoginPage/>
       )

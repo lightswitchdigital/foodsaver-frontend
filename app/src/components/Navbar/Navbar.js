@@ -36,12 +36,12 @@ export const Navbar = ({type = ''}) => {
                 </li>
                 <li>
                     <NavLink to={'/team'} className={s.link} activeClassName={s.active}>
-                        Моя команда
+                        Мои команды
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to={'/grath'} className={s.link} activeClassName={s.active}>
-                        График
+                        Мое расписание
                     </NavLink>
                 </li>
             </ul>}

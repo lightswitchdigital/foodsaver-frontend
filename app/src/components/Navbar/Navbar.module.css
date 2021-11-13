@@ -23,7 +23,6 @@
   border-radius: 12px;
   background: #4E9B33;
   color: #fff;
-  font-weight: 600;
 }
 .wrapper ul li:not(:last-child) {
   margin-right: 28px;

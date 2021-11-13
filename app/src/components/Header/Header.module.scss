@@ -3,17 +3,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px 0;
-    border-bottom: 1px solid #ECEDED;;
-    .logo{
+    border-bottom: 1px solid #ECEDED;
+
+    .logo {
         max-width: 190px;
     }
-    .btnLogOut{
+
+    .btnLogOut {
         padding: 12px 64px;
         display: block;
         font-style: 18px;
         font-weight: 600;
     }
-    ul{
+
+    ul {
         list-style: none;
         padding: 0;
         margin: 0;

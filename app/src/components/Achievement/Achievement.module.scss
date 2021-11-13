@@ -18,11 +18,23 @@ p{
     margin: 0;
 }
 .progress{
-    display: block;
-    width: 100%;
-    height: 8px;
-    position: relative;
+  display: block;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #ECEDED;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+
+  span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #35B2E8;
     border-radius: 8px;
+<<<<<<< HEAD
     border: 1px solid #ECEDED;
     box-sizing: border-box;
     margin-bottom: 16px;
@@ -34,4 +46,7 @@ p{
         background: #35B2E8;
         border-radius: 8px;
     }
+=======
+  }
+>>>>>>> 693ca52560de10f5e45887c4d8e4262f8ccc6586
 }

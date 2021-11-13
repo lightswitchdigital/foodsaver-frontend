@@ -12,44 +12,40 @@ export const GrathPage = () => {
                 <table className={s.table}>
                     <thead>
                         <tr>
-                            <th>Пн</th>
-                            <th>Вт</th>
-                            <th>Ср</th>
-                            <th>Чт</th>
-                            <th>Пт</th>
-                            <th>Сб</th>
-                            <th>Вс</th>
+                            <th>Пн<small>01.09.2021</small></th>
+                            <th>Вт<small>02.09.2021</small></th>
+                            <th>Ср<small>03.09.2021</small></th>
+                            <th>Чт<small>04.09.2021</small></th>
+                            <th>Пт<small>05.09.2021</small></th>
+                            <th>Сб<small>06.09.2021</small></th>
+                            <th>Вс<small>07.09.2021</small></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th>
-                                <p>11:00 - 14:00</p>
-                                <p>15:00 - 19:00</p>
+                                <p>11:30</p>
+                                <small>Пятерочка</small>
                             </th>
                             <th>
-                                <p>11:00 - 14:00</p>
-                                <p>15:00 - 19:00</p>
+
                             </th>
                             <th>
-                                <p>11:00 - 14:00</p>
-                                <p>15:00 - 19:00</p>
+
                             </th>
                             <th>
-                                <p>11:00 - 14:00</p>
-                                <p>15:00 - 19:00</p>
+
                             </th>
                             <th>
-                                <p>11:00 - 14:00</p>
-                                <p>15:00 - 19:00</p>
+                                <p>15:40</p>
+                                <small>Перекресток</small>
                             </th>
                             <th>
-                                <p>11:00 - 14:00</p>
-                                <p>15:00 - 19:00</p>
+                                <p>12:35</p>
+                                <small>Пятерочка</small>
                             </th>
                             <th>
-                                <p>11:00 - 14:00</p>
-                                <p>15:00 - 19:00</p>
+
                             </th>
                         </tr>
                     </tbody>

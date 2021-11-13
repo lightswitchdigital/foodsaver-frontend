@@ -14,7 +14,7 @@ export const Achievement = () => {
                         <span className={s.progress}>
                             <span style={{width: '40%'}}></span>
                         </span>
-                        <h3 className={'green-text'}>6 раз</h3>
+                        <h3 className={'blue-text'}>6 раз</h3>
                         <p className={'subtitle'}>Прибыл на точку вовремя</p>
                         <p className={'btn'}>Награда</p>
                         <p className={'subtitle'}>Достижение: Всегда вовремя</p>
@@ -25,7 +25,7 @@ export const Achievement = () => {
                         <span className={s.progress}>
                             <span style={{width: '40%'}}></span>
                         </span>
-                        <h3 className={'green-text'}>6 раз</h3>
+                        <h3 className={'blue-text'}>6 раз</h3>
                         <p className={'subtitle'}>Прибыл на точку вовремя</p>
                         <p className={'btn'}>Награда</p>
                         <p className={'subtitle'}>Достижение: Всегда вовремя</p>
@@ -36,7 +36,7 @@ export const Achievement = () => {
                         <span className={s.progress}>
                             <span style={{width: '40%'}}></span>
                         </span>
-                        <h3 className={'green-text'}>6 раз</h3>
+                        <h3 className={'blue-text'}>6 раз</h3>
                         <p className={'subtitle'}>Прибыл на точку вовремя</p>
                         <p className={'btn'}>Награда</p>
                         <p className={'subtitle'}>Достижение: Всегда вовремя</p>
