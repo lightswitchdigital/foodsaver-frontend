@@ -17,7 +17,7 @@
 }
 
 .green-text{
-    color: #4E9B33;
+    color: #35B2E8;
 }
 
 .btn{
@@ -138,3 +138,82 @@
     color: #264653;
     margin-top: 12px;
 }
+
+.popupUi{
+    padding: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+}
+.popupUi::after{
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    left: 50%;
+    top: -10px;
+    position: absolute;
+    display: block;
+    transform: translateX(-50%) rotate(45deg);
+}
+.popupUi input, .popupUi .Dropdown-control, .popupUi h4{
+    margin-top: 0;
+    margin-bottom: 12px;
+    width: 150px;
+
+}
+.popupUi input, .popupUi .Dropdown-control{
+    border: 1px solid #ECEDED;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.popupUi input{
+    padding: 7px 12px;
+}
+
+.team-name{
+    font-size: 16px;
+    font-weight: 400;
+    color: #606060;
+    margin: 20px 0;
+}
+
+.green-btn{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    color: #4E9B33;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.red-text{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(239, 68, 21, 0.6);
+}
+.blue-btn{
+    padding: 12px 54px;
+    background: none;
+    border: none;
+    display: block;
+    border: 2px solid #35B2E8;
+    border-radius: 8px;
+    color: #35B2E8;
+    font-weight: 600;
+    font-size: 18px;
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.blue-btn:hover{
+    background: #35B2E8;
+    color: #fff;
+}
+.flex{display:flex}

@@ -43,6 +43,6 @@ class WardsPageAPI extends Component  {
 const mapStateToProps = (state) => ({
     wards: getWards(state),
     isFetching: state.app.isFetching
-  })
+})
 
 export const WardsPage = connect(mapStateToProps, { requestWards })(WardsPageAPI)

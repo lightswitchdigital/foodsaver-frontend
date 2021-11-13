@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import { Achievement } from '../../Achievement/Achievement'
 import { Card } from '../../ui/Card'
 import s from './GrathLeadPage.module.css'
+import { Button, Popup } from 'semantic-ui-react'
+import UiPopup from '../../ui/Popup'
 
 export const GrathLeadPage = () => {
     return (
@@ -34,128 +36,128 @@ export const GrathLeadPage = () => {
                         <tr>
                             <th>ПН</th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                         </tr>
                         <tr>
                             <th>ВТ</th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                         </tr>
                         <tr>
                             <th>СР</th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                         </tr>
                         <tr>
                             <th>ЧТ</th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                         </tr>
                         <tr>
                             <th>ПТ</th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                         </tr>
                         <tr>
                             <th>СБ</th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                         </tr>
                         <tr>
                             <th>ВС</th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                             <th><span className={[s.btnCalender + ' ' + s.active]}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
-                            <th><span className={s.btnCalender}></span></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
+                            <th><UiPopup trigger={<span className={s.btnCalender}></span>}/></th>
                         </tr>
                     </tbody>
                 </table>

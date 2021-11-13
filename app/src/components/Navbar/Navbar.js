@@ -19,7 +19,7 @@ export const Navbar = ({type = ''}) => {
                 </li>
                 <li>
                     <NavLink to={'/team'} className={s.link} activeClassName={s.active}>
-                        Моя команда
+                        Команда
                     </NavLink>
                 </li>
             </ul> :

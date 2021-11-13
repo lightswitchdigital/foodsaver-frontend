@@ -15,6 +15,7 @@ import { GrathLeadPage } from './components/Pages/GrathLeadPage/GrathLeadPage';
 import { LoginPage } from './components/Pages/LoginPage/LoginPage';
 import { loginUser } from './redux/reducers'
 import DocumentsPage from './components/Pages/DocumentsPage/DocumentsPage';
+import { UserPage } from './components/Pages/UserPage/UserPage';
 
 class App extends Component {
   componentDidMount() {
@@ -54,6 +55,7 @@ class App extends Component {
                       <Route path={'/team'} component={() => <TeamPage/>}/>
                       <Route path={'/grath'} component={() => <GrathLeadPage/>}/>
                       <Route path={'/documents'} component={() => <DocumentsPage/>}/>
+                      <Route path={'/user'} component={() => <UserPage/>}/>
                       <Route path="*"><Redirect to="/grath" /></Route>
                     </Switch>
                     case "user": 

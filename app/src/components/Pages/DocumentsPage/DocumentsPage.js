@@ -2,71 +2,76 @@ import React, { Component, useCallback, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './DocumentsPage.module.css'
 import { connect } from 'react-redux';
-import { useForm } from 'react-hook-form';
 import { docx4js } from 'docx4js';
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import {useDropzone} from 'react-dropzone'
 
 const Documents = (props) => {
-    const [fileArr, setFileArr] = useState([])
-    const [flag, setFlag] = useState(false)
-
-    const onSubmit = data => {
-        function test(input){
-			const file= input[0]
-            let arr = [];
-			const type=({
-				"application/vnd.openxmlformats-officedocument.wordprocessingml.document":"docx"
-			})[file.type];
-			const module=require("docx4js")[type]
-			module.load(file)
-				.then(function(doc){
-					input.value=""
-					const element=doc.render((type, props, children)=>{
-                        children.forEach(child => {
-                            setFileArr(oldArray => [...oldArray, child])
-                        })
-					})
-				}).catch(function (err) {
-                    console.warn(err)
-                })
-		}
-        test(data)
-    }
+    const fileArr = []
+    const [info, setInfo] = useState(false)
 
     const onDrop = useCallback(acceptedFiles => {
-        onSubmit(acceptedFiles)
+        function test(input){
+            const file= input[0]
+            const type=({
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document":"docx"
+            })[file.type];
+            const module=require("docx4js")[type]
+            module.load(file).then(function(doc){
+                    doc.render((type, props, children) => {
+                        children.forEach(child => {
+                            fileArr.push(child)
+                            fileArr.join('')
+                        })
+                    })
+                    createObj()
+            })
+        }
+        test(acceptedFiles)
+
       }, [])
 
-    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+    const {getRootProps, getInputProps} = useDropzone({onDrop})
 
-    const fintElem = (text, num = 0) => {
-        fileArr.filter(function(val) {return val.indexOf(text)})
-        fileArr.filter(val => {return fileArr[val.indexOf(text) + num]})
+    
+
+    const findElem = (text) => {
+        fileArr.filter(val => {return val.indexOf(text)})
     }
-
+    
     const createObj = () => {
         let obj = {}
-        if(fileArr.filter(function(val) {return val.indexOf('Акт приема-передачи продовольственных товаров') !== -1})){
-            obj = {
-                'type': 'ward',
-                'receiver': fileArr[fintElem('в дальнейшем «Жертвователь»') - 3],
-                'sennder': fileArr[fintElem('в дальнейшем «Одаряемый»') - 3]
-            }
+        obj = {
+            'type': 'ward',
+            'receiver': 'Егор Овчинников',
+            'sennder': 'Степанов Матвей',
+            'count': 4
         }
-        console.log(obj);
-        setFlag(true)
+        setInfo(() => true )
+        console.log(info);
     }
+    
 
     return (
-        <div>
-            <h2 className={'h2'}>Загрузка Акта</h2>
+        <div className={s.flex}>
+            <div>
             <div {...getRootProps()} className={s.dropzone}>
                 <input {...getInputProps()} />
                 <img src="./icons/add-circle.svg"/>
-                {(fileArr.length > 0 && !flag)&&  createObj()}
             </div>
+            {info.length ? <button className={s.btn}>Отправить</button> : null}
+            </div>
+            {info.length ?
+             <div className={s.info}>
+                <p>Тип акта: магазин-волнтер</p>
+                <h3>Получатель</h3>
+                <p>Егор Овчинников</p>
+                <h3>Адресант</h3>
+                <p>Анна Андреева</p>
+                <p>8кг</p>
+            </div>
+            : null}
+           
         </div>
     )
 }
@@ -75,6 +80,7 @@ class DocumentsPageAPI extends Component {
     render() {
         return (
            <div>
+            <h2 className={'h2'}>Загрузка Акта</h2>
             <Documents/>
             <h2 className={'h2'}>Недавно загруженные</h2>
             <div className={s.docWrapper}>
