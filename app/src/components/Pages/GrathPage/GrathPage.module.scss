@@ -1,0 +1,19 @@
+.table{
+    th{
+        font-weight: 400;
+        padding: 10px 16px;
+        text-align: left;
+        &:not(:first-child){
+            border-left: 1px solid #ECEDED;
+        }
+    }
+    thead{
+        th{
+            border-bottom: 1px solid #ECEDED;
+        }
+    }
+}
+.week{
+    color: #606060;
+    margin-bottom: 20px;
+}

@@ -10,6 +10,7 @@ import { Navbar } from './components/Navbar/Navbar';
 import { WardsPage } from './components/Pages/WardsPage/WardsPage';
 import { TeamPage } from './components/Pages/TeamPage/TeamPage';
 import { OrganizationsPage } from './components/Pages/OrganizationsPage/OrganizationsPage';
+import { GrathPage } from './components/Pages/GrathPage/GrathPage';
 
 class App extends Component {
   render() {
@@ -25,7 +26,7 @@ class App extends Component {
                 <Route path={'/wards'} component={() => <WardsPage/>}/>
                 <Route path={'/organizations'} component={() => <OrganizationsPage/>}/>
                 <Route path={'/team'} component={() => <TeamPage/>}/>
-                <Route path={'/grath'} component={() => <>grath</>}/>
+                <Route path={'/grath'} component={() => <GrathPage/>}/>
                 <Route path="*"><Redirect to="/wards" /></Route>
               </Switch>
             </div>
