@@ -1,1 +1,40 @@
-.header{display:flex;justify-content:space-between;align-items:center;padding:40px 0;border-bottom:1px solid #eceded}.header .logo{max-width:170px}.header .btnLogOut{padding:12px 64px;display:block;font-style:18px;font-weight:600}.header ul{list-style:none;padding:0;margin:0;display:flex;font-size:18px;font-family:"Avenirnextcyr"}.header ul li{list-style:none}.header ul li a{text-decoration:none;display:block;padding:0 14px;color:#606060;font-weight:400}.header ul li a.activeLink{font-weight:450;color:#4e9b33}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #ECEDED;
+}
+.header .logo {
+  max-width: 190px;
+}
+.header .btnLogOut {
+  padding: 12px 64px;
+  display: block;
+  font-style: 18px;
+  font-weight: 600;
+}
+.header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: 18px;
+  font-family: "Avenirnextcyr";
+}
+.header ul li {
+  list-style: none;
+}
+.header ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0 14px;
+  color: #606060;
+  font-weight: 400;
+}
+.header ul li a.activeLink {
+  font-weight: 450;
+  color: #4E9B33;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

@@ -28,7 +28,9 @@ const Documents = (props) => {
                             setFileArr(oldArray => [...oldArray, child])
                         })
 					})
-				})
+				}).catch(function (err) {
+                    console.warn(err)
+                })
 		}
         test(data)
     }

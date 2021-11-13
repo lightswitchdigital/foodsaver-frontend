@@ -17,9 +17,11 @@
                 padding: 5px 20px;
                 transition: 0.5;
                 &.active{
+                    padding: 9px 20px;
+                    border-radius: 12px;
                     background: #4E9B33;
-                    border-radius: 8px;
                     color: #fff;
+                    font-weight: 600;
                 }
             }
             &:not(:last-child){
